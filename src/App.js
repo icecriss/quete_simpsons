@@ -6,6 +6,7 @@ import "./App.css";
 // import Quote from "./Quote";
 import Quotes from "./Quotes";
 import Lamp from "./Lamp";
+import Working from "./Working";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
         <Lamp on />
         <Lamp />
         <Quotes />
+        <Working on />
       </div>
     );
   }
