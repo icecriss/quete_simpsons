@@ -1,10 +1,16 @@
 .App {
   text-align: center;
 }
-
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  margin-top: 25px;
+}
+.App-logo.working {
+  animation: toRight infinite 1s linear;
   height: 80px;
+}
+.App-logo.onBreak {
+  animation: toLeft infinite 35s linear;
+  height: 115px;
 }
 
 .App-header {
@@ -14,15 +20,38 @@
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+h1 {
+  font-size: 18px;
+  margin: 0;
 }
 
-.App-intro {
-  font-size: large;
+button {
+  margin: 25px 0;
+  padding: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
+button:focus {
+  outline:0;
+}
+
+button.onBreak {
+  background-color: black;
+  color: gold;
+  border: 1px gold solid;
+}
+button.working {
+  background-color: gold;
+  color: black;
+  border: 1px black solid;
+}
+
+@keyframes toRight {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+@keyframes toLeft {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
